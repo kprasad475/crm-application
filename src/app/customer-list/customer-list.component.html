@@ -1,13 +1,16 @@
-<mat-card>
+<mat-card class="customer-card">
+  <mat-card-header class="customer-header">
     <mat-card-title>Customers</mat-card-title>
-    <mat-card-content>
-      <mat-list *ngIf="customers">
-        <mat-list-item *ngFor="let customer of customers">
-          <mat-icon mat-list-icon>person</mat-icon>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list *ngIf="customers">
+      <mat-list-item *ngFor="let customer of customers" class="customer-item">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <div class="customer-info">
           <div mat-line>{{ customer.name }}</div>
-          <a mat-raised-button [routerLink]="['/customers', customer.id]">View Details</a>
-        </mat-list-item>
-      </mat-list>
-    </mat-card-content>
-  </mat-card>
-  
+          <a mat-raised-button color="primary" [routerLink]="['/customers', customer.id]" class="view-details-button">View Details</a>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

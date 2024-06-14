@@ -1,20 +1,48 @@
-.customer-list-container {
-    margin: 20px;
-  }
-  
-  mat-list-item {
-    background-color: white;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  
-    &:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-  }
-  
-  mat-list-item:last-child {
-    margin-bottom: 0;
-  }
-  
+.customer-card {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.customer-header {
+  background-color: #3f51b5;
+  color: white;
+  padding: 10px;
+}
+
+.customer-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 20px; /* Increased margin for more spacing */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  background: white; /* Ensures background is white */
+}
+
+.customer-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.customer-item mat-icon {
+  color: #3f51b5;
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.customer-info div {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.view-details-button {
+  flex-shrink: 0;
+  white-space: nowrap;
+}

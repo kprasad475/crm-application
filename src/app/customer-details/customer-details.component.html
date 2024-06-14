@@ -1,11 +1,13 @@
-<mat-card *ngIf="customer">
+<mat-card class="customer-detail-card" *ngIf="customer">
+  <mat-card-header class="customer-detail-header">
     <mat-card-title>{{ customer.name }}</mat-card-title>
-    <mat-card-content>
-      <p><strong>Email:</strong> {{ customer.email }}</p>
-      <p><strong>Phone:</strong> {{ customer.phone }}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button   routerLink="/customers">Back to Customers</button>
-    </mat-card-actions>
-  </mat-card>
+  </mat-card-header>
+  <mat-card-content>
+    <p><strong>Email:</strong> {{ customer.email }}</p>
+    <p><strong>Phone:</strong> {{ customer.phone }}</p>
+  </mat-card-content>
+  <mat-card-actions class="customer-detail-actions">
+    <button mat-raised-button color="primary" routerLink="/customers">Back to Customers</button>
+  </mat-card-actions>
+</mat-card>
   
